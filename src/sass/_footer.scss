@@ -1,0 +1,161 @@
+.footer{
+    box-shadow: $ShadowFooter;
+}
+.footer__container{
+    padding-top: 60px;
+    padding-bottom: 60px;
+   
+    @media screen and (min-width: 768px) {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+}
+
+.footer__hight-side {
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        margin-bottom: 12px;
+    }
+}
+
+.footer-nav{
+    display: flex;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+            align-items: center;
+        }
+
+       @media screen and (min-width: 1200px) {
+         margin-bottom: 0;
+                         }
+
+    }
+
+    .footer__logo{
+        width: 69px;
+        height: 51px;
+        margin-right: 81px;
+
+        @media screen and (min-width: 768px) {
+                margin-right: 114px;
+            }
+
+        @media screen and (min-width: 1200px) {
+                 margin-right: 145px;
+                        }
+    }
+
+    
+.footer-nav__list{
+    @extend %reset-list;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+           flex-direction: row;
+        }
+}
+
+.footer-nav__link{
+    @extend %reset-link;
+    color: $SecondaryTextColor;
+    @include fonts(14px, 16px);
+
+    @media screen and (min-width: 768px) {
+            padding-top: 18px;
+            padding-bottom: 18px;
+        }
+}
+
+.footer-subsc{
+    margin-left: auto;
+}
+
+.subscribe-title{
+    @include fonts(14px, 21px, 500);
+    margin-bottom: 12px;
+    
+}
+
+.subscription__btn-footer {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 22px;
+    width: 103px;
+    height: 42px;
+    border-radius: 30px;
+    border: 1px solid $MainBorderColor;
+    background-color: inherit;
+    margin-left: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+    @include fonts(13px, 20px, 500);
+
+    @media screen and (min-width: 768px) {
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+  
+}
+
+.policy{
+    display: flex;
+    gap: 3px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+           margin-bottom: 100px;
+        }
+
+     @media screen and (min-width: 1200px) {
+           margin-bottom: 80px;
+           justify-content: flex-end;
+                 }
+
+   }
+
+.policy__dsc{
+    @include fonts(10px, 12px);
+    
+}
+
+.policy__link{
+    @include fonts(10px, 12px);
+    color: $MainBorderColor;
+}
+
+.footer-info{
+    @media screen and (min-width: 768px) {
+           display: flex;
+           align-items: flex-end;
+}
+}
+
+.footer-info__list{
+    @extend %reset-list;
+    display: flex;
+    gap: 32px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+           margin-bottom: 0;
+        }
+}
+
+.footer-info__link{
+    @include fonts(10px, 12px);
+    color: $MainBorderColor;
+}
+
+.copyright{
+    @include fonts(10px, 12px);
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+            margin-left: auto;
+        }
+   
+    }
