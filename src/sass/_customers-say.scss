@@ -1,31 +1,25 @@
-.customers-say {
+.customers-say {    
+    padding-top: 60px;
+    padding-bottom: 60px;
     
-    padding: 60px 20px;    
-    margin-left: auto;
-    margin-right: auto;   
     background-image: url('../images/costomers/bg-mob.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    @media screen and (min-width: 480px) {
-        width: 480px;
-        
-    }
+    background-size: 100% 100%;    
     
-    @media screen and (min-width: 768px) {
-        width: 768px;
-        padding: 60px 32px 120px;        
+    @media screen and (min-width: 768px) {           
+        padding-bottom: 120px;             
         background-image: url('../images/costomers/bg-tab.png');
     }
-    @media screen and (min-width: 1200px) {
-        width: 1200px;
-        padding: 100px 16px 200px;
+    @media screen and (min-width: 1200px) {        
+        padding-top: 100px;
+        padding-bottom: 200px;
         background-image: url('../images/costomers/bg@1x-des.jpg');
         @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
             background-image: url('../images/costomers/bg@2x-des.jpg');
         }
-    }
+    }   
 
     &__title {
         @include fonts(28px, 33px, 700);
@@ -56,15 +50,17 @@
 }
 
 .review {
-    max-width: 501px; 
+    
     background-color: $MainColor;
     padding: 8px;
     border-radius: 0px 30px 30px 30px;
     @media screen and (min-width: 768px) {       
         padding: 12px;
+        
     }
     @media screen and (min-width: 1200px) {    
         padding: 14px;
+        
     }
     &__descr {
         margin-top: 22px;
