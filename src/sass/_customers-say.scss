@@ -1,0 +1,88 @@
+.customers-say {
+    max-width: 1280px;
+    padding: 60px 20px;    
+    margin-left: auto;
+    margin-right: auto;   
+    background-image: url('../images/costomers/bg-mob.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+    @media screen and (min-width: 768px) {
+        padding: 60px 32px 120px;        
+        background-image: url('../images/costomers/bg-tab.png');
+    }
+    @media screen and (min-width: 1200px) {
+        padding: 100px 16px 200px;
+        background-image: url('../images/costomers/bg@1x-des.jpg');
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url('../images/costomers/bg@2x-des.jpg');
+        }
+    }
+}
+.customers-say__title {
+    @include fonts(28px, 33px, 700);
+    margin-bottom: 20px;
+    @media screen and (min-width: 768px) {       
+        @include fonts(42px, 49px, 700);
+    }
+}
+.customers-say__descr {
+    margin-bottom: 32px;
+    @include fonts(14px, 16px);
+    @media screen and (min-width: 768px) {       
+        @include fonts(16px, 19px);
+    }
+}
+.customers-say__thumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    @media screen and (min-width: 768px) {       
+        flex-wrap: nowrap;
+        gap: 32px;
+    }
+    @media screen and (min-width: 1200px) {    
+        gap: 139px;
+    }
+}
+.review {
+    max-width: 501px; 
+    background-color: $MainColor;
+    padding: 8px;
+    border-radius: 0px 30px 30px 30px;
+    @media screen and (min-width: 768px) {       
+        padding: 12px;
+    }
+    @media screen and (min-width: 1200px) {    
+        padding: 14px;
+    }
+}
+.review__descr {
+    margin-top: 22px;
+    margin-bottom: 40px;
+    @include fonts(16px, 19px, 700);
+    @media screen and (min-width: 768px) {       
+        margin-top: 28px;
+        @include fonts(18px, 21px, 700);
+    }
+
+}
+.review__client {
+    display: flex;
+}
+.review__client-thumb {
+    margin-left: 16px;
+    padding-right: 16px;
+    border-right: 0.85px solid $MainBorderColor;
+}
+.review__name {
+    @include fonts(14px, 20px);
+}
+.review__name-descr {
+    @include fonts(14px, 20px);
+}
+.review__img {    
+    @extend %reset-img;    
+}
