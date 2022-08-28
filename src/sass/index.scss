@@ -5,6 +5,7 @@
 @import './utils/decimals';
 @import'./utils/placeholders';
 @import'./utils/mixins';
+@import'./utils/visually-hidden';
 
 // base styles
 @import'./base/base';
@@ -22,5 +23,6 @@
 @import'./footer';
 
 
-
+//components
+@import'./components/subscription-form';
 
