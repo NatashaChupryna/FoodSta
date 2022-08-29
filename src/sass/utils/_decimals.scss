@@ -39,7 +39,7 @@
     }
 
     @if $mode ==round {
-        @return round($number * $n) / $n;
+        @return calc(round($number * $n) / $n);
     }
 
     @else if $mode ==ceil {
@@ -89,3 +89,4 @@
 @function decimal-floor($number, $digits: 0) {
     @return decimal-round($number, $digits, floor);
 }
+
