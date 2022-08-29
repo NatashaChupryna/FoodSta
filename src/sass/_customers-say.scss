@@ -10,7 +10,7 @@
         padding-bottom: 120px;             
         background-image: url('../images/costomers/bg-tab.png');
     }
-    @media screen and (min-width: 1200px) {        
+    @media screen and (min-width: 1280px) {        
         padding-top: 100px;
         padding-bottom: 200px;
         background-image: url('../images/costomers/bg@1x-des.jpg');
@@ -43,7 +43,7 @@
             flex-wrap: nowrap;
             gap: 32px;
         }
-        @media screen and (min-width: 1200px) {    
+        @media screen and (min-width: 1280px) {    
             gap: 139px;
         }
     }
@@ -58,7 +58,7 @@
         padding: 12px;
         
     }
-    @media screen and (min-width: 1200px) {    
+    @media screen and (min-width: 1280px) {    
         padding: 14px;
         
     }
