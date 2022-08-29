@@ -25,9 +25,12 @@
 }
 
 .offerings__container {
-  display: flex;
+ 
+   @media screen and (min-width: 1200px){
+    display: flex;
   align-items: center;
   gap: 90px;
+   }
 }
 
 .img__border {
