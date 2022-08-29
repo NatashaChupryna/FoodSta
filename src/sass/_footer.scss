@@ -12,7 +12,7 @@
 }
 
 .footer__hight-side {
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
         display: flex;
         margin-bottom: 12px;
     }
@@ -26,7 +26,7 @@
             align-items: center;
         }
 
-       @media screen and (min-width: 1200px) {
+       @media screen and (min-width: 1280px) {
          margin-bottom: 0;
                          }
 
@@ -41,7 +41,7 @@
                 margin-right: 114px;
             }
 
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1280px) {
                  margin-right: 145px;
                         }
     }
@@ -110,7 +110,7 @@
            margin-bottom: 100px;
         }
 
-     @media screen and (min-width: 1200px) {
+     @media screen and (min-width: 1280px) {
            margin-bottom: 80px;
            justify-content: flex-end;
                  }

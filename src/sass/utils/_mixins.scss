@@ -9,7 +9,7 @@
 @mixin fonts($fs, $lh, $fw: 400, $ls: null) {
     font-weight: $fw;
     font-size: $fs;
-    line-height: decimal-round($lh / $fs);
+    line-height: decimal-round(calc($lh / $fs));
     letter-spacing: $ls;
 
 }
