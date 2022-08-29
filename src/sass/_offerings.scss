@@ -73,7 +73,7 @@
 }
 
 .offerings__title {
-@include  fonts(42px, 50.4px, 700)
+@include  fonts(42px, 50.4px, 700);
   margin-bottom: 20px;
   color: $PraimaryTextColor;
 }
