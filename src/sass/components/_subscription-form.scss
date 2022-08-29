@@ -9,7 +9,7 @@
         flex-direction: row;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
         gap: 32px;
     }
 }
@@ -19,9 +19,9 @@
             gap: 12px;
             margin-bottom: 12px;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
              gap: 13px;
-             margin-bottom: 0;
+             margin-bottom: 12px;
                 }
     }
    
