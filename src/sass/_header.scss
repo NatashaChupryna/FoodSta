@@ -155,15 +155,15 @@
   @include transition-base(transform);
 }
 
-.mobile-nav {
-  list-style: none;
-  padding-left: 0;
-}
-
 .mobile-link {
   @include fonts(16px, 19px, 400);
   @extend %reset-link;
   color: currentColor;
+}
+
+.mobile-nav {
+  list-style: none;
+  padding-left: 0;
 }
 
 .mobile-nav-item {
