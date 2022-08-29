@@ -1,0 +1,66 @@
+.form-subscription {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    
+    @media screen and (min-width: 768px) {
+        gap: 22px;
+        flex-direction: row;
+    }
+
+    @media screen and (min-width: 1200px) {
+        gap: 32px;
+    }
+}
+
+.footer__form-subscription{
+    @media screen and (min-width: 768px) {
+            gap: 12px;
+            margin-bottom: 12px;
+
+    @media screen and (min-width: 1200px) {
+             gap: 13px;
+             margin-bottom: 0;
+                }
+    }
+   
+}
+
+.form-subscription__input {
+    max-width: 440px;
+    height: 42px;
+    border-radius: 30px;
+    background-color: inherit;
+    border: 1px solid $DefaultBorderColor;
+    outline: none;
+    padding: 11px 12px;
+    @include transition-base (border);
+
+    @media screen and (min-width: 768px) {
+        width: 394px;
+        @include fonts(12px, 18px);
+
+    }
+
+    &::placeholder {
+        @include fonts(12px, 18px);
+        color: $PlaseholderTextColor;
+
+    }
+}
+
+.footer-form-subscription__input{
+    @media screen and (min-width: 768px) {
+            width: 279px;
+                              }
+}
+
+.form-subscription__input:focus:invalid {
+    border: 1px solid $ErrorBorderColor;
+}
+
+.form-subscription__input:valid {
+    border: 1px solid $MainBorderColor;
+
+}
