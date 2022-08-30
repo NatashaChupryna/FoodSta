@@ -1,5 +1,6 @@
 <section class="offerings">
   <div class="container offerings__container">
+    <div class="img-set--wrap">
     <div class="img__border">
       <div class="img__background">
         <img
@@ -17,6 +18,28 @@
           class="img"
         />
       </div>
+    </div>
+
+    <div class="img--blur--wrap">
+    <img 
+    class="img--blur"
+    srcset="./images/Offerings/apple_blur166.png 166w,
+    ./images/Offerings/apple_blur332.png 332w
+    " 
+    sizes="(min-width: 768px) 166px, 100wv"
+    src="./images/Offerings/apple_blur166.png"
+    alt="apple"/>
+
+      <img 
+    class="img--blur bl"
+    srcset="./images/Offerings/apple_blur108.png 108w,
+    ./images/Offerings/apple_blur216.png 216w
+    " 
+    sizes="(min-width: 768px) 108px, 100wv"
+    src="./images/Offerings/apple_blur166.png"
+    alt="apple"/>
+    </div>
+
     </div>
 
     <div class="offerings__title--wrap">
@@ -56,7 +79,12 @@
         </li>
       </ul>
 
-      <button class="offerings__btn" type="button">Order Now</button>
+      <button class="offerings__btn" type="button">Order Now</button> 
+      <a href="" class="offerings__link">Read More
+        <svg class="offerings__link__icon" width="14" height="14">
+        <use href="./images/icons.svg#arrow-right"></use>
+        </svg>
+      </a>
     </div>
   </div>
 </section>
