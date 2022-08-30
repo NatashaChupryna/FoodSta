@@ -1,14 +1,14 @@
 .hero {
-  padding-top: 60px;
+  padding-top: 137px;
   padding-bottom: 50px;
  @media screen and (min-width: 768px){
-    padding-top: 60px;
-  padding-bottom: 60px;
+    padding-top: 137px;
+  padding-bottom: 0;
  }
 
   @media screen and (min-width: 1280px) {
-    padding-top: 150px;
-     padding-bottom: 164px;
+    padding-top: 227px;
+     padding-bottom: 0;
   }
 }
 
@@ -106,7 +106,7 @@
     justify-content: center;
     border-radius: 50%;
     background-color: #fefefe;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   @include transition-base(border);
     &:hover,
     &:focus,
     &:active {
@@ -136,4 +136,170 @@
      width: 528px;
   }
 
+}
+
+
+// MODAL
+/* Backdrop */
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(94, 99, 99, 0.7);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 9999;
+  visibility: visible;
+  @media screen and (max-width: 768px) {
+    padding: 93px 15px;
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.1);
+  opacity: 0;
+}
+
+.modal {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  width: 320px;
+  min-height: 449px;
+  padding: 32px 20px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: $DefaultBorderColor;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 30px;
+  opacity: 1;
+  z-index: 500;
+
+  @media screen and (min-width: 768px) {
+    width: 458px;
+   min-height: 449px;
+    top: 98px;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 129px;
+  }
+}
+
+.modal__close-btn{
+  position: absolute;
+  top: 16px;
+    right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: $MainColor;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px;
+   
+}
+.modal__close-icon {
+  width: 24px;
+  height: 24px;
+  fill: black;
+}
+
+/* Form */
+
+.modal-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.modal-form__contact-head {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.modal-form__field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form__label {
+  margin-bottom: 2px;
+  margin-left: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.modal-form__input {
+  padding: 14px 12px;
+  height: 48px;
+  background: $MainColor;
+  border: 1px solid $MainBorderColor;
+  border-radius: 30px;
+  outline: transparent;
+  @include transition-base(border-color);
+
+  &:focus-within,
+  &:hover {
+    border-color: $MainBorderColor;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C4C4C4;
+  }
+
+  &:valid{
+      border: 1px solid $MainBorderColor;
+  }
+  &:invalid{
+    border: 1px solid red;
+  }
+}
+
+.modal-form__btn {
+    text-align: center;
+    min-width: 106px;
+    color: $PraimaryTextColor;
+    background: $MainColor ;
+    border: 2px solid $MainBorderColor;
+    margin: 0 auto;
+    padding: 8px 34px;
+    display: block;
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+     @include transition-base(background-color);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $ImgAccentBorderColor;
+    }
 }

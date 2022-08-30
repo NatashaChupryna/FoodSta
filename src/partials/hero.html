@@ -1,3 +1,4 @@
+
 <section class="hero" id="about">
   <div class="container hero__container">
     <div class="hero__title--wrap">
@@ -7,7 +8,7 @@
         varius enim in eros elementum tristique. Duis cursus, mi quis viverra
         ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
       </p>
-      <button class="hero__btn" type="button">Order Now</button>
+      <button class="hero__btn" type="button" data-modal-open>Order Now</button>
     </div>
 
     <div class="hero__img--wrap">
@@ -26,3 +27,74 @@
     </div>
   </div>
 </section>
+
+<!-- Modal -->
+
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button type="button" class="modal__close-btn" data-modal-close>
+      <svg class="modal__close-icon" width="24" height="24">
+        <use href="./images/icons.svg#menu-close"></use>
+      </svg>
+    </button>
+    <form class="modal-form">
+      <strong class="modal-form__contact-head">Order Form</strong>
+      <div
+        class="modal-form__group"
+        role="group"
+        aria-labelledby="contact_head"
+        id="contact_head"
+      >
+        <label class="modal-form__field">
+          <span class="modal-form__label">Name</span>
+          <input
+            class="modal-form__input"
+            type="text"
+            name="name"
+            required
+            minlength="3"
+            maxlength="25"
+            placeholder="Your name"
+          />
+        </label>
+
+        <label class="modal-form__field">
+          <span class="modal-form__label">Phone number</span>
+          <input
+            class="modal-form__input"
+            type="tel"
+            name="tel"
+            placeholder="+38(0_ _) _ _ _   _ _   _ _"
+            pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+            minlength="9"
+            maxlength="13"
+        
+          />
+        </label>
+
+        <label class="modal-form__field">
+          <span class="modal-form__label">E-mail</span>
+          <input
+            class="modal-form__input"
+            type="email"
+            name="email"
+            placeholder="example@gmail.com"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            title="Invalid email address"
+          />
+        </label>
+      </div>
+
+      <button
+        class="btn modal-form__btn"
+        type="submit"
+        title="All fields are required"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="./index.js"></script>
+
