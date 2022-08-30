@@ -7,9 +7,23 @@
     url(../images/footer/footer-down-mob@1x.png);
     background-repeat: no-repeat;
     background-position: left 132px, left 132px, right top, right 25px, center bottom;
+    // @media (min-device-pixel-ratio: 2),
+    //     (min-resolution: 192dpi),
+    //     (min-resolution: 2dppx) {
+    //         background-image: url(../images/footer/mob-apple-frame@2x.png),
+    //         url(../images/footer/mob-apple@2x.png),
+    //         url(../images/footer/orange-frame@2x.png),
+    //         url(../images/footer/orange@2x.png),    
+    //         url(../images/footer/footer-down-mob@2x.png);
+    // }
     @media screen and (min-width: 768px) {
-        background-image: url(../images/footer/footer@1x_tab.png);
-        background-position: center bottom; 
+        background-image: url(../images/footer/orange-tab@1x.png);
+        background-position: right top;
+        // @media (min-device-pixel-ratio: 2),
+        //     (min-resolution: 192dpi),
+        //     (min-resolution: 2dppx) {
+        //         background-image: url('../images/footer/orange-tab@2x.png');
+        // }
     }
     @media screen and (min-width: 1280px) {
         background-image: none;
@@ -24,12 +38,24 @@
    
     @media screen and (min-width: 768px) {
         padding-top: 100px;
-        padding-bottom: 100px;   
+        padding-bottom: 100px;
+        background-image: url(../images/footer/footer-down-tab@1x.png);
+        background-position: center bottom;
+        // @media (min-device-pixel-ratio: 2),
+        //     (min-resolution: 192dpi),
+        //     (min-resolution: 2dppx) {
+        //         background-image: url('../images/footer/footer-down-tab@2x.png');
+        //     }
     } 
     @media screen and (min-width: 1280px) {
-        background-image: url(../images/footer/footer@1x_des.png);
+        background-image: url('../images/footer/footer@1x_des.png');
         background-repeat: no-repeat;
         background-position: right bottom; 
+        // @media (min-device-pixel-ratio: 2),
+        //     (min-resolution: 192dpi),
+        //     (min-resolution: 2dppx) {
+        //         background-image: url('../images/footer/footer@2x_des.png');
+        //     }
     }       
   
 }
