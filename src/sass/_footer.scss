@@ -1,6 +1,20 @@
 .footer{
     box-shadow: $ShadowFooter;
-    
+    background-image: url(../images/footer/mob-apple-frame@1x.png),
+    url(../images/footer/mob-apple@1x.png),
+    url(../images/footer/orange-frame@1x.png),
+    url(../images/footer/orange@1x.png),    
+    url(../images/footer/footer-down-mob@1x.png);
+    background-repeat: no-repeat;
+    background-position: left 132px, left 132px, right top, right 25px, center bottom;
+    @media screen and (min-width: 768px) {
+        background-image: url(../images/footer/footer@1x_tab.png);
+        background-position: center bottom; 
+    }
+    @media screen and (min-width: 1280px) {
+        background-image: none;
+    }  
+        
     
 }
 .footer__container{
@@ -10,10 +24,13 @@
    
     @media screen and (min-width: 768px) {
         padding-top: 100px;
-        padding-bottom: 100px;
-    
-            
-        }        
+        padding-bottom: 100px;   
+    } 
+    @media screen and (min-width: 1280px) {
+        background-image: url(../images/footer/footer@1x_des.png);
+        background-repeat: no-repeat;
+        background-position: right bottom; 
+    }       
   
 }
 
@@ -26,7 +43,9 @@
 
 .footer-nav {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 40px;
+    max-width: 380px;
     
 
     @media screen and (min-width: 768px) {
@@ -43,7 +62,7 @@
 .footer__logo {
     width: 69px;
     height: 51px;    
-    margin-right: 81px;
+    // margin-right: 81px;
 
     @media screen and (min-width: 768px) {
         margin-right: 114px;
@@ -61,6 +80,7 @@
     display: flex;
     gap: 20px;
     flex-direction: column;
+    margin-right: 101px;
 
     @media screen and (min-width: 768px) {
         flex-direction: row;
@@ -72,11 +92,18 @@
     @extend %reset-link;
     color: $SecondaryTextColor;
     @include fonts(14px, 16px);
+    @include transition-base(color text-decoration-line);
+    
 
     @media screen and (min-width: 768px) {
         padding-top: 18px;
         padding-bottom: 18px;
     }
+}
+.footer-nav__link:hover,
+.footer-nav__link:focus {
+    color: $AccentTextColor;
+    text-decoration-line: underline;    
 }
 
 .footer-subsc{
@@ -106,12 +133,17 @@
     margin-bottom: 20px;
     cursor: pointer;
     @include fonts(13px, 20px, 500);
+    @include transition-base(background-color);
 
     @media screen and (min-width: 768px) {
             margin-left: 0;
             margin-bottom: 0;
         }
   
+}
+.subscription__btn-footer:hover,
+.subscription__btn-footer:focus {
+    background-color: $DefaultBorderColor;
 }
 
 .policy{
@@ -141,9 +173,15 @@
 .policy__link{
     @include fonts(10px, 12px);
     color: $MainBorderColor;
+    @include transition-base(color);
     @media screen and (min-width: 768px) {
         @include fonts(12px, 14px);
     }
+}
+.policy__link:hover,
+.policy__link:focus {
+    color: $AccentTextColor;
+    
 }
 
 .footer-info{
@@ -169,9 +207,15 @@
 .footer-info__link{
     @include fonts(10px, 12px);
     color: $MainBorderColor;
+    @include transition-base(color);
     @media screen and (min-width: 768px) {
         @include fonts(12px, 14px);
     }
+}
+.footer-info__link:hover,
+.footer-info__link:focus {
+    color: $AccentTextColor;
+
 }
 
 .copyright{
