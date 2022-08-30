@@ -54,6 +54,7 @@
     margin-left: auto;
     cursor: pointer;
     @include fonts(13px, 20px, 500);
+    @include transition-base (background-color);
 
     @media screen and (min-width: 768px) {
             margin-left: 0;
@@ -64,7 +65,7 @@
 .subscription__btn:hover,
 .subscription__btn:focus{
     background-color: $AccentButtonColor;
-}
+    }
 
 .subscribe__img{
 @extend %reset-img;
