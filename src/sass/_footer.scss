@@ -152,15 +152,7 @@
 .subscription__btn-footer:focus {
     background-color: $DefaultBorderColor;
 }
-.subscribe-invalid {
-    
-    @include fonts(10px, 15px);
-    color: $ErrorBorderColor;
-    margin-top: 4px;
-    display: none;
-   
-    
-}
+
 
 .policy{
     display: flex;

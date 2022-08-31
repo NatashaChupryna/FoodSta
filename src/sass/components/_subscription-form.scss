@@ -1,4 +1,5 @@
 .form-subscription {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -55,17 +56,49 @@
             width: 279px;
                               }
 }
+.form-subscription__input:not(:placeholder-shown):required:valid {
+    border-color: $MainBorderColor;
+}
 
-.form-subscription__input:focus:invalid {
-    border: 1px solid $ErrorBorderColor;
+.form-subscription__input:not(:placeholder-shown):required:invalid {
+            border-color: $ErrorBorderColor;}
+
+
+.contact-form-notfication {
+   display: inline-block;
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    top:20px;
+    left: 115px;
+    transform: translate(-50%, 15px) scale(0.3);
+    transform-origin: center;
+    opacity: 0;
+    @include transition-base (opacity transform);
+   
+
+    @include fonts(10px, 15px);
+    color: $ErrorBorderColor;
+    text-align: center;
+
+   }
+
+.footer__contact-form-notfication{
+    top: 14px;
+    @media screen and (max-width: 480px) {
+            top: 20px;
     
+        }
 }
-.footer-form-subscription__input:invalid 
-.subscribe-invalid {
-    display: block;
 
+
+.notfication__icon{
+    padding-top: 10px;
 }
-.form-subscription__input:valid {
-    border: 1px solid $MainBorderColor;
 
+
+.form-subscription__input:invalid:not(:placeholder-shown)~.contact-form-notfication {
+    opacity: 1;
+    transform: translate(-50%, 15px) scale(1);
 }

@@ -19,18 +19,23 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       varius enim in eros elementum tristique.
     </p>
-    <form class="form-subscription">
+    <form class="form-subscription" novalidate>
       <input
         class="form-subscription__input"
         type="email"
+        pattern="[^@\s]+@[^@\s]+"
         name="email"
         autocomplete="off"
         placeholder="Enter your email"
         required
-        oninvalid="this.setCustomValidity('Not a valid email address (example@email.com)')"
-        oninput="setCustomValidity('')"
       />
-      <button class="subscription__btn" type="submit">Subscribe</button>
+      <div class="contact-form-notfication">
+        <svg class="notfication__icon" width="12" height="22">
+          <use href="./images/icons.svg#sign"></use>
+        </svg>
+        <span> Not a valid email address (example@email.com) </span>
+      </div>
+      <button class="subscription__btn" type="button">Subscribe</button>
     </form>
   </div>
 </section>
