@@ -10,7 +10,7 @@
             alt="logo"
           />
         </a>
-        <nav class="nav">
+        <nav class="footer-nav">
           <ul class="footer-nav__list">
             <li class="footer-nav__item">
               <a class="footer-nav__link" href="#home">Home</a>
@@ -40,13 +40,16 @@
             autocomplete="off"
             placeholder="Enter your email"
             required
-            oninvalid="this.setCustomValidity('Not a valid email address (example@email.com)')"
-            oninput="setCustomValidity('')"
           />
+          <span class="subscribe-invalid">
+            Not a valid email address (example@email.com)
+          </span>
+
           <button class="subscription__btn-footer" type="submit">
             Subscribe
           </button>
         </form>
+
         <div class="policy">
           <p class="policy__dsc">By subscribing you agree to with our</p>
           <a class="policy__link" href="">Privacy Policy</a>

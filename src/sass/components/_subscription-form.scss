@@ -17,11 +17,11 @@
 .footer__form-subscription{
     @media screen and (min-width: 768px) {
             gap: 12px;
-            margin-bottom: 12px;
+            // margin-bottom: 12px;
 
     @media screen and (min-width: 1280px) {
              gap: 13px;
-             margin-bottom: 12px;
+            //  margin-bottom: 12px;
                 }
     }
    
@@ -58,8 +58,13 @@
 
 .form-subscription__input:focus:invalid {
     border: 1px solid $ErrorBorderColor;
+    
 }
+.footer-form-subscription__input:invalid 
+.subscribe-invalid {
+    display: block;
 
+}
 .form-subscription__input:valid {
     border: 1px solid $MainBorderColor;
 
