@@ -181,7 +181,7 @@
 .mobile-link {
   @include fonts(16px, 19px, 400);
   @extend %reset-link;
-  color: currentColor;
+  color: $SecondaryTextColor;
 }
 
 .mobile-nav {

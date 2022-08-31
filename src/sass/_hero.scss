@@ -307,6 +307,9 @@
 .slider-content {
   position: absolute;
   display: none;
+ 
+  
+ 
   @media screen and (min-width: 768px) {
     display: block;
     width: 320px;
@@ -316,10 +319,11 @@
   }
   @media screen and (min-width: 1280px) {
     position: absolute;
+    
     width: 580px;
     height: 580px;
     top: 0;
-    right: 18px;
+    right: 15px;
   }
 }
 
@@ -336,12 +340,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 14px solid $DefaultBorderColor;
-    border-radius: 50%;
+    // border: 14px solid $DefaultBorderColor;
+    // border-radius: 50%;
   }
 
   @media screen and (min-width: 1280px) {
-    border: 26px solid $DefaultBorderColor;
+  
     position: absolute;
     top: -140px;
     right: 16px;
@@ -351,12 +355,25 @@
 }
 
 .swiper {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  overflow: hidden;
-  list-style: none;
-  z-index: 1;
+
+    border: 15px solid $DefaultBorderColor;
+    border-radius: 50%;
+    width: 320px;
+    height: 320px;
+  
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    z-index: 1;
+@media screen and (min-width: 1280px) {
+border: 20px solid $DefaultBorderColor;
+width: 560px;
+height: 565px;
+  }
+
+ 
 }
 
 .swiper__btn {
@@ -421,26 +438,33 @@ padding: 4px;
 .swiper__btn--right {
   right: -20px;
   @media screen and (min-width: 1280px) {
-    right: -38px;
+    right: -30x;
   }
 }
 
 .swiper-button-next {
   left: auto;
   @media screen and (min-width: 768px) {
-    right: -20px;
+    right: -8px;
   }
   @media screen and (min-width: 1280px) {
-    right: -28px;
+    right: 0;
   }
 }
 
 .swiper-button-prev {
   @media screen and (min-width: 768px) {
-    left: -20px;
+    left: -5px;
   }
   @media screen and (min-width: 1280px) {
-    left: -30px;
+    left: 5px;
     right: auto;
   }
 }
+
+// .hero__img{
+//   @media screen and (min-width: 1280px) {
+//       width: 565px;
+//       height: 565px;
+//     }
+// }
