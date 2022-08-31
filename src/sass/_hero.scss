@@ -324,9 +324,9 @@
 }
 
 .swiper__border {
- @media screen and (min-width: 320px) and (max-width: 767px) {
-  display: none;
- }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    display: none;
+  }
   @media screen and (min-width: 768px) {
     position: absolute;
     top: 100px;
@@ -337,18 +337,10 @@
     justify-content: center;
     align-items: center;
     border: 14px solid $DefaultBorderColor;
-  border-radius: 50%;
-  &:hover,
-  &:focus,
-  &:active {
-    border: 14px solid $ButtonColor;
-  }
+    border-radius: 50%;
   }
 
- }
-
-  .swiper__border{
- @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     border: 26px solid $DefaultBorderColor;
     position: absolute;
     top: -140px;
@@ -356,13 +348,7 @@
     width: 580px;
     height: 580px;
   }
-  &:hover,
-  &:focus,
-  &:active {
-    border: 26px solid $ButtonColor;
-  }
-  }
-
+}
 
 .swiper {
   margin-left: auto;
@@ -403,8 +389,14 @@
 
   .swiper__icon {
     fill: currentColor;
-    width: 48px;
-    height: 40px;
+    width: 34px;
+    height: 28px;
+
+    @media screen and (min-width: 1280px) {
+      fill: currentColor;
+      width: 48px;
+      height: 40px;
+    }
   }
 }
 
@@ -431,11 +423,11 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-border-radius: 8px;
+  border-radius: 8px;
 
   @media screen and (min-width: 1280px) {
     min-width: 40px;
-  height: 48px;
+    height: 48px;
   }
 }
 
@@ -443,33 +435,32 @@ border-radius: 8px;
   color: $SecondaryTextColor;
   font-size: 32px;
   background-color: #ffffff;
-    min-width: 33px;
+  min-width: 33px;
   height: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-border-radius: 8px;
- @media screen and (min-width: 1280px) {
+  border-radius: 8px;
+  @media screen and (min-width: 1280px) {
     min-width: 40px;
-  height: 48px;
+    height: 48px;
   }
 }
 .swiper-button-next {
   left: auto;
-   @media screen and (min-width: 768px) {
-  right: -30px;
+  @media screen and (min-width: 768px) {
+    right: -30px;
   }
- @media screen and (min-width: 1280px) {
-  right: -28px;
+  @media screen and (min-width: 1280px) {
+    right: -28px;
   }
-
 }
 
 .swiper-button-prev {
   left: -25px;
   right: auto;
-   @media screen and (min-width: 768px) {
-  left: -30px;
+  @media screen and (min-width: 768px) {
+    left: -30px;
   }
 }
