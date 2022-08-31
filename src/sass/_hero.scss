@@ -361,19 +361,23 @@
 
 .swiper__btn {
   position: absolute;
-  padding-top: 5px;
-  width: 34px;
-  height: 28px;
+padding: 4px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
   border-radius: 4px;
-  color: black;
   z-index: 10;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  @media screen and (min-width: 768px) {
+    width: 28px;
+    height: 34px;
+  }
+
   @media screen and (min-width: 1280px) {
     border-radius: 4px;
+    width: 40px;
+    height: 48px;
   }
   &::after {
     display: none;
@@ -383,20 +387,27 @@
     color: $MainBorderColor;
   }
   &:active {
-    color: black;
+    color: $SecondaryTextColor;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
   }
+}
 
-  .swiper__icon {
-    fill: currentColor;
-    width: 34px;
-    height: 28px;
+.swiper__icon {
+  fill: $SecondaryTextColor;
+  @media screen and (min-width: 768px) {
+    width: 31px;
+    height: 22px;
+  }
 
-    @media screen and (min-width: 1280px) {
-      fill: currentColor;
-      width: 48px;
-      height: 40px;
-    }
+  @media screen and (min-width: 1280px) {
+    fill: $SecondaryTextColor;
+    width: 48px;
+    height: 40px;
+  }
+
+  .swiper__btn:hover,
+  .swiper__btn:focus & {
+    fill: $MainBorderColor;
   }
 }
 
@@ -413,44 +424,11 @@
     right: -38px;
   }
 }
-.slider-content .swiper-button-prev::after {
-  color: $SecondaryTextColor;
-  font-size: 32px;
-  background-color: $MainColor;
-  min-width: 33px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-  border-radius: 8px;
 
-  @media screen and (min-width: 1280px) {
-    min-width: 40px;
-    height: 48px;
-  }
-}
-
-.slider-content .swiper-button-next::after {
-  color: $SecondaryTextColor;
-  font-size: 32px;
-  background-color: #ffffff;
-  min-width: 33px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-  border-radius: 8px;
-  @media screen and (min-width: 1280px) {
-    min-width: 40px;
-    height: 48px;
-  }
-}
 .swiper-button-next {
   left: auto;
   @media screen and (min-width: 768px) {
-    right: -30px;
+    right: -20px;
   }
   @media screen and (min-width: 1280px) {
     right: -28px;
@@ -458,9 +436,11 @@
 }
 
 .swiper-button-prev {
-  left: -25px;
-  right: auto;
   @media screen and (min-width: 768px) {
+    left: -20px;
+  }
+  @media screen and (min-width: 1280px) {
     left: -30px;
+    right: auto;
   }
 }
