@@ -422,8 +422,7 @@ padding: 4px;
     height: 40px;
   }
 
-  .swiper__btn:hover,
-  .swiper__btn:focus & {
+  .swiper__btn:hover & {
     fill: $MainBorderColor;
   }
 }
