@@ -7,7 +7,7 @@
         varius enim in eros elementum tristique. Duis cursus, mi quis viverra
         ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
       </p>
-      <button class="hero__btn" type="button" data-modal-open >Order Now</button>
+      <button class="hero__btn" type="button" data-modal-open>Order Now</button>
     </div>
 
     <!-- <div class="hero__img--wrap">
@@ -97,7 +97,7 @@
         <use href="./images/icons.svg#menu-close"></use>
       </svg>
     </button>
-    <form class="modal-form">
+    <form class="modal-form" novalidate>
       <strong class="modal-form__contact-head">Order Form</strong>
       <div
         class="modal-form__group"
@@ -112,10 +112,17 @@
             type="text"
             name="name"
             required
-            minlength="0"
+            minlength="2"
             maxlength="25"
             placeholder="Your name"
+            required
           />
+          <div class="modal-form-notfication">
+            <svg class="modal-notfication__icon" width="12" height="22">
+              <use href="./images/icons.svg#sign"></use>
+            </svg>
+            <span> The name must be between 3 and 25 characters </span>
+          </div>
         </label>
 
         <label class="modal-form__field">
@@ -125,10 +132,17 @@
             type="tel"
             name="tel"
             placeholder="+38(0_ _) _ _ _   _ _   _ _"
-            pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
-            minlength="9"
+            pattern="^+380\d{3}\d{2}\d{2}\d{2}$"
+            minlength="13"
             maxlength="13"
+            required
           />
+          <div class="modal-form-notfication">
+            <svg class="modal-notfication__icon" width="12" height="22">
+              <use href="./images/icons.svg#sign"></use>
+            </svg>
+            <span> This phone must be in the format +380990000000 </span>
+          </div>
         </label>
 
         <label class="modal-form__field">
@@ -140,7 +154,14 @@
             placeholder="example@gmail.com"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             title="Invalid email address"
+            required
           />
+          <div class="modal-form-notfication">
+            <svg class="modal-notfication__icon" width="12" height="22">
+              <use href="./images/icons.svg#sign"></use>
+            </svg>
+            <span> Please enter a valid email address </span>
+          </div>
         </label>
       </div>
 

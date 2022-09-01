@@ -251,7 +251,8 @@
   padding: 14px 12px;
   height: 48px;
   background: $MainColor;
-  border: 1px solid $MainBorderColor;
+  border: 1px solid rgba(18, 18, 18, 0.12);
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
   outline: transparent;
   @include transition-base(border-color);
@@ -268,14 +269,45 @@
     color: #c4c4c4;
   }
 
-  &:valid {
-    border: 1px solid $MainBorderColor;
+  &:not(:placeholder-shown):required:valid {
+    border-color: $MainBorderColor;
   }
+  &:not(:placeholder-shown):required:invalid {
+    border-color: $ErrorBorderColor;
+  }
+        
 }
-.add {
-  &:invalid {
-    border: 1px solid red;
-  }
+.modal-form-notfication {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  top: 58px;
+  left: 150px;
+  transform: translate(-50%, 15px) scale(0.3);
+  transform-origin: center;
+  opacity: 0;
+  @include transition-base (opacity transform);
+
+
+  @include fonts(11px, 15px, 500);
+  color: $ErrorBorderColor;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+      left: 220px;
+      @include fonts(13px, 18px, 500);
+  
+    }
+
+}
+.modal-notfication__icon {
+  margin-top: -4px;
+  margin-right: 4px;
+}
+
+.modal-form__input:invalid:required:not(:placeholder-shown)~.modal-form-notfication {
+  opacity: 1;
+  transform: translate(-50%, 15px) scale(1);
 }
 
 .modal-form__btn {
@@ -300,6 +332,9 @@
   &:active {
     background-color: $ImgAccentBorderColor;
   }
+}
+.modal-form__input:invalid:required:not(:placeholder-shown)~.modal-form__btn {
+  border: 2px solid $ErrorBorderColor;
 }
 
 // SLIDER
