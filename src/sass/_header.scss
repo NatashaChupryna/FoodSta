@@ -86,6 +86,10 @@
   color: $AccentTextColor;
 }
 
+.nav__link--current {
+  color: $AccentTextColor;
+}
+
 .nav__link--current::after {
   content: '';
   width: 0px;
@@ -133,8 +137,8 @@
 
 .menu-overlay {
   position: fixed;
-  top: 60px;
-  right: 50px;
+  top: 55px;
+  right: 20px;
   z-index: 100;
   width: 130px;
   height: 255px;
