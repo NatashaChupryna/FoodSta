@@ -1,9 +1,8 @@
 // Modal
 
-
 (() => {
   const refs = {
-   openModalBtn: document.querySelector('[data-modal-open]'),
+    openModalBtn: document.querySelector('[data-modal-open]'),
     openModalBtnHead: document.querySelector('[data-modal-open-head]'),
     openModalBtnOffer: document.querySelector('[data-modal-open-offer]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
@@ -12,6 +11,8 @@
   };
 
   refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.openModalBtnHead.addEventListener('click', toggleModal);
+  refs.openModalBtnOffer.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
@@ -19,6 +20,7 @@
     refs.body.classList.toggle('no-scroll');
   }
 })();
+
 
 
 // Slider
